@@ -28,7 +28,7 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
-			<Target title="VulkanTest">
+			<Target title="VulkanRendering">
 				<Option output="VulkanRendering" prefix_auto="1" extension_auto="1" />
 				<Option object_output="/home/njsnacker/code/Vulkan/.objs" />
 				<Option type="1" />
@@ -39,6 +39,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Light.hpp" />
 		<Unit filename="Makefile">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -50,6 +51,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
