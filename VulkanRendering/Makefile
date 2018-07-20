@@ -5,7 +5,7 @@ TARGET = VulkanRendering
 CPPFLAGS = -std=c++11 -I$(VULKAN_SDK_PATH)/include
 LDFLAGS = -L$(VULKAN_SDK_PATH)/lib `pkg-config --static --libs glfw3` -lvulkan
 
-VulkanRendering: main.cpp vert.spv frag.spv
+VulkanRendering: *.hpp *.cpp vert.spv frag.spv
 	g++ $(CPPFLAGS) -o $(TARGET) *.cpp $(LDFLAGS)
 
 vert.spv: shader.vert
@@ -20,4 +20,4 @@ test: VulkanRendering
     LD_LIBRARY_PATH=$(VULKAN_SDK_PATH)/lib VK_LAYER_PATH=$(VULKAN_SDK_PATH)/etc/explicit_layer.d ./$(TARGET)
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGET) *.o

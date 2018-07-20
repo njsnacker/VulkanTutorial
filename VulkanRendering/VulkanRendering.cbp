@@ -14,6 +14,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="./" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -23,6 +24,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,6 +36,9 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
+				<Compiler>
+					<Add directory="./" />
+				</Compiler>
 			</Target>
 		</Build>
 		<Compiler>
@@ -44,10 +49,16 @@
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="Model.cpp" />
+		<Unit filename="Model.hpp" />
+		<Unit filename="VulkanRenderer.cpp" />
+		<Unit filename="VulkanRenderer.hpp" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="shader.frag" />
+		<Unit filename="shader.vert" />
 		<Extensions>
 			<code_completion />
 			<debugger />
